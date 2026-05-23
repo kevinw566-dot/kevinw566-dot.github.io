@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Waters | Spa, Wellness & Relaxation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        calm: {
+                            light: '#E0F2F1',
+                            DEFAULT: '#80CBC4',
+                            dark: '#26A69A',
+                            deeper: '#00695C'
+                        },
+                        soft: '#FAFAFA',
+                        earth: '#424242'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'serif']
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .audio-player {
+                background: rgba(255,255,255,0.7);
+                border-radius: 9999px;
+                padding: 8px 12px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-soft text-earth font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-[clamp(1.2rem,2vw,1.8rem)] font-serif font-bold text-calm-deeper">Calm Waters</a>
+            <div class="hidden md:flex gap-8">
+                <a href="#about" class="hover:text-calm-dark transition-custom">About</a>
+                <a href="#products" class="hover:text-calm-dark transition-custom">Products</a>
+                <a href="#samples" class="hover:text-calm-dark transition-custom">Listen & Relax</a>
+                <a href="#store" class="hover:text-calm-dark transition-custom">Store</a>
+            </div>
+            <button class="md:hidden text-earth">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-[90vh] flex items-center bg-calm-light/30 bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center bg-blend-lighten">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-[clamp(2rem,5vw,4rem)] font-serif font-bold text-calm-deeper text-shadow leading-tight">
+                    Calm Waters
+                </h1>
+                <p class="mt-6 text-[clamp(1rem,2vw,1.2rem)] text-earth/80">
+                    Immerse yourself in serenity. We curate spa-inspired atmospheres, wellness essentials, and soothing audio to help you rest, recharge, and find balance every day.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#products" class="bg-calm-dark hover:bg-calm-deeper text-white px-8 py-3 rounded-full transition-custom shadow-lg hover:shadow-xl">
+                        Explore Products
+                    </a>
+                    <a href="#samples" class="bg-white/80 hover:bg-white text-calm-deeper border border-calm-dark px-8 py-3 rounded-full transition-custom backdrop-blur-sm">
+                        Listen to Samples
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Ambient Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-serif font-bold text-calm-deeper text-center mb-12">
+                Our Philosophy
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600334089648-6b945188c7c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Spa ambiance with candles and natural elements" 
+                         class="rounded-2xl shadow-xl w-full h-auto">
+                </div>
+                <div class="space-y-4">
+                    <p class="text-lg leading-relaxed">
+                        At Calm Waters, we believe wellness begins with atmosphere. Our collection is designed to bring the peaceful, restorative feeling of a luxury spa right into your home — whether through gentle scents, soft textures, or calming soundscapes.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Every product is chosen to support relaxation, reduce stress, and help you create your own personal sanctuary. We blend natural inspiration with thoughtful design, so you can slow down and breathe easier.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-calm-light/20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-serif font-bold text-calm-deeper text-center mb-4">
+                Wellness & Relaxation Products
+            </h2>
+            <p class="text-center text-earth/70 max-w-2xl mx-auto mb-12">
+                Carefully crafted items to enhance your wellbeing, from soothing audio tracks to physical spa essentials.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-custom overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519824426765-5a933a9a323e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Relaxation Audio Collection" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-calm-deeper">Serenity Soundscapes</h3>
+                        <p class="text-earth/70 mt-2">High-quality audio tracks featuring water sounds, soft ambient music, and nature recordings for meditation and sleep.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-custom overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1567593810070-446a7b4a738f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Aromatherapy Essentials" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-calm-deeper">Aromatherapy Sets</h3>
+                        <p class="text-earth/70 mt-2">Natural essential oil blends, soothing candles, and room mists designed to create a calming spa-like environment instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-custom overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1574680098431-d5b7f67f2d1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Wellness Accessories" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-serif font-bold text-xl text-calm-deeper">Comfort & Care</h3>
+                        <p class="text-earth/70 mt-2">Soft textiles, massage tools, and relaxation aids made with gentle materials to support your self-care routine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Audio Tracks Section - SECURE VERSION -->
+    <section id="samples" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-serif font-bold text-calm-deeper text-center mb-4">
+                Listen & Unwind
+            </h2>
+            <p class="text-center text-earth/70 max-w-2xl mx-auto mb-12">
+                Try these short samples — close your eyes, breathe deeply, and let the calm flow in. <br><small class="text-calm-dark">(Audio plays securely — no direct access possible)</small>
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <!-- Track 1 -->
+                <div class="bg-calm-light/30 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-serif font-bold text-lg text-calm-deeper mb-2">Gentle Stream</h3>
+                    <p class="text-earth/70 text-sm mb-4">Soft flowing water with subtle forest ambiance — perfect for focus or relaxation.</p>
+                    <audio controls controlsList="nodownload" class="audio-player">
+                        <source src="https://actions.google.com/sounds/v1/ambient/stream.ogg" type="audio/ogg">
+                        Your browser does not support audio playback.
+                    
+                </div>
+
+                <!-- Track 2 -->
+                <div class="bg-calm-light/30 p-6 rounded-2xl shadow-sm">
+                    <h3 class="font-serif font-bold text-lg text-calm-deeper mb-2">Evening Stillness</h3>
+                    <p class="text-earth/70 text-sm mb-4">Calm evening atmosphere with distant bird calls and soft wind — ideal before sleep.</p>
+                    <audio controls controlsList="nodownload" class="audio-player">
+                        <source src="https://actions.google.com/sounds/v1/ambient/evening_crickets.ogg" type="audio/ogg">
+                        Your browser does not support audio playback.
+                    
+                </div>
+
+                <!-- Track 3 -->
+                <div class="bg-calm-light/30 p-6 rounded-2xl shadow-sm md:col-span-2">
+                    <h3 class="font-serif font-bold text-lg text-calm-deeper mb-2">Deep Peace</h3>
+                    <p class="text-earth/70 text-sm mb-4">Slow, gentle ambient tones blended with ocean waves — designed to lower stress and slow breathing.</p>
+                    <audio controls controlsList="nodownload" class="audio-player">
+                        <source src="https://actions.google.com/sounds/v1/ambient/ocean_waves.ogg" type="audio/ogg">
+                        Your browser does not support audio playback.
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payhip Store Section -->
+    <section id="store" class="py-20 bg-calm-dark/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-serif font-bold text-calm-deeper mb-6">
+                Visit Our Store
+            </h2>
+            <p class="max-w-xl mx-auto text-earth/80 mb-8 text-lg">
+                Browse the full collection and purchase your favourites securely. All products are available for instant download or delivery — bringing calm to you, wherever you are.
+            </p>
+            <a href="https://payhip.com/calmwaters" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-calm-dark hover:bg-calm-deeper text-white font-medium px-10 py-4 rounded-full text-lg transition-custom shadow-lg hover:shadow-xl">
+                Go to Payhip Store
+            </a>
+            <p class="text-sm text-earth/60 mt-4">* Replace the link above with your actual Payhip store URL</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-calm-deeper text-white/80 py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-serif text-xl font-bold text-white mb-2">Calm Waters</p>
+            <p class="text-sm">© 2026 Calm Waters — Wellness & Relaxation</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <a href="#" class="hover:text-white transition-custom"><i class="fa fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-custom"><i class="fa fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-custom"><i class="fa fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
